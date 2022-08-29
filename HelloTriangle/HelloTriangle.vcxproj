@@ -21,10 +21,10 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{7114614c-7bd1-48c6-9bc0-f2db3b70606f}</ProjectGuid>
-    <RootNamespace>Starter</RootNamespace>
+    <ProjectGuid>{ca14b574-e1f3-40b8-88aa-10becf21c162}</ProjectGuid>
+    <RootNamespace>HelloTriangle</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>Starter</ProjectName>
+    <ProjectName>HelloTriangle</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
