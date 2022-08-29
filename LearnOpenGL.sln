@@ -13,6 +13,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HelloRectangle", "HelloRect
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HelloRectangleEBO", "HelloRectangleEBO\HelloRectangleEBO.vcxproj", "{18639545-2B74-47FE-8AC7-79E5DA5EC75D}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ShaderExample", "ShaderExample\ShaderExample.vcxproj", "{68B6AC46-C8E0-4577-B541-A67FD5F7A418}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -61,6 +63,14 @@ Global
 		{18639545-2B74-47FE-8AC7-79E5DA5EC75D}.Release|x64.Build.0 = Release|x64
 		{18639545-2B74-47FE-8AC7-79E5DA5EC75D}.Release|x86.ActiveCfg = Release|Win32
 		{18639545-2B74-47FE-8AC7-79E5DA5EC75D}.Release|x86.Build.0 = Release|Win32
+		{68B6AC46-C8E0-4577-B541-A67FD5F7A418}.Debug|x64.ActiveCfg = Debug|x64
+		{68B6AC46-C8E0-4577-B541-A67FD5F7A418}.Debug|x64.Build.0 = Debug|x64
+		{68B6AC46-C8E0-4577-B541-A67FD5F7A418}.Debug|x86.ActiveCfg = Debug|Win32
+		{68B6AC46-C8E0-4577-B541-A67FD5F7A418}.Debug|x86.Build.0 = Debug|Win32
+		{68B6AC46-C8E0-4577-B541-A67FD5F7A418}.Release|x64.ActiveCfg = Release|x64
+		{68B6AC46-C8E0-4577-B541-A67FD5F7A418}.Release|x64.Build.0 = Release|x64
+		{68B6AC46-C8E0-4577-B541-A67FD5F7A418}.Release|x86.ActiveCfg = Release|Win32
+		{68B6AC46-C8E0-4577-B541-A67FD5F7A418}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
