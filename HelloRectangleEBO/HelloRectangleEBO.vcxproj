@@ -21,10 +21,10 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{ca14b574-e1f3-40b8-88aa-10becf21c162}</ProjectGuid>
+    <ProjectGuid>{18639545-2B74-47FE-8AC7-79E5DA5EC75D}</ProjectGuid>
     <RootNamespace>HelloTriangle</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>HelloTriangle</ProjectName>
+    <ProjectName>HelloRectangleEBO</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -141,14 +141,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="gl3w.c" />
-    <ClCompile Include="HelloTriangle.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="LoadShader.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\shader\hellofrag.frag" />
-    <None Include="..\shader\hellovertex.vert" />
+    <ClCompile Include="HelloRectangleEBO.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

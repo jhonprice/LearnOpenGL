@@ -15,24 +15,11 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="HelloTriangle.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="gl3w.c">
       <Filter>源文件</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="LoadShader.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\shader\hellovertex.vert">
-      <Filter>资源文件</Filter>
-    </None>
-    <None Include="..\shader\hellofrag.frag">
-      <Filter>资源文件</Filter>
-    </None>
+    <ClCompile Include="HelloRectangleEBO.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
