@@ -18,18 +18,15 @@
     <ClCompile Include="gl3w.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="ShaderExample.cpp">
+    <ClCompile Include="MoreAttribute.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\shader\example_shader.frag">
+    <None Include="..\shader\moreAttri_shader.frag">
       <Filter>资源文件</Filter>
     </None>
-    <None Include="..\shader\example_shader.vert">
-      <Filter>资源文件</Filter>
-    </None>
-    <None Include="..\shader\example_shader_uniform.frag">
+    <None Include="..\shader\moreAttri_shader.vert">
       <Filter>资源文件</Filter>
     </None>
   </ItemGroup>
