@@ -23,6 +23,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TexturesExample", "Textures
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GLMExample", "GLMExample\GLMExample.vcxproj", "{75E1317B-4C76-475C-8139-F76778B30161}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CoordinateAndZbuffer", "CoordinateAndZbuffer\CoordinateAndZbuffer.vcxproj", "{A3876FF9-FA2F-4752-BB9F-BE9C61F6C2F0}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MoreCubeAndZbuffer", "MoreCubeAndZbuffer\MoreCubeAndZbuffer.vcxproj", "{670BB390-3FE5-4FB9-8F8C-2F5DED66B065}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -111,6 +115,22 @@ Global
 		{75E1317B-4C76-475C-8139-F76778B30161}.Release|x64.Build.0 = Release|x64
 		{75E1317B-4C76-475C-8139-F76778B30161}.Release|x86.ActiveCfg = Release|Win32
 		{75E1317B-4C76-475C-8139-F76778B30161}.Release|x86.Build.0 = Release|Win32
+		{A3876FF9-FA2F-4752-BB9F-BE9C61F6C2F0}.Debug|x64.ActiveCfg = Debug|x64
+		{A3876FF9-FA2F-4752-BB9F-BE9C61F6C2F0}.Debug|x64.Build.0 = Debug|x64
+		{A3876FF9-FA2F-4752-BB9F-BE9C61F6C2F0}.Debug|x86.ActiveCfg = Debug|Win32
+		{A3876FF9-FA2F-4752-BB9F-BE9C61F6C2F0}.Debug|x86.Build.0 = Debug|Win32
+		{A3876FF9-FA2F-4752-BB9F-BE9C61F6C2F0}.Release|x64.ActiveCfg = Release|x64
+		{A3876FF9-FA2F-4752-BB9F-BE9C61F6C2F0}.Release|x64.Build.0 = Release|x64
+		{A3876FF9-FA2F-4752-BB9F-BE9C61F6C2F0}.Release|x86.ActiveCfg = Release|Win32
+		{A3876FF9-FA2F-4752-BB9F-BE9C61F6C2F0}.Release|x86.Build.0 = Release|Win32
+		{670BB390-3FE5-4FB9-8F8C-2F5DED66B065}.Debug|x64.ActiveCfg = Debug|x64
+		{670BB390-3FE5-4FB9-8F8C-2F5DED66B065}.Debug|x64.Build.0 = Debug|x64
+		{670BB390-3FE5-4FB9-8F8C-2F5DED66B065}.Debug|x86.ActiveCfg = Debug|Win32
+		{670BB390-3FE5-4FB9-8F8C-2F5DED66B065}.Debug|x86.Build.0 = Debug|Win32
+		{670BB390-3FE5-4FB9-8F8C-2F5DED66B065}.Release|x64.ActiveCfg = Release|x64
+		{670BB390-3FE5-4FB9-8F8C-2F5DED66B065}.Release|x64.Build.0 = Release|x64
+		{670BB390-3FE5-4FB9-8F8C-2F5DED66B065}.Release|x86.ActiveCfg = Release|Win32
+		{670BB390-3FE5-4FB9-8F8C-2F5DED66B065}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
