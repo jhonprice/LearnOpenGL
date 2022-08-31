@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CameraExample.cpp">
+    <ClCompile Include="ColorExample.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="gl3w.c">
@@ -29,18 +29,15 @@
     <ClInclude Include="..\include\stb_image.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Camera.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="..\MoreCubeAndZbuffer\build_world.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\shader\camera_shader.frag">
+    <None Include="..\shader\color_shader.frag">
       <Filter>资源文件</Filter>
     </None>
-    <None Include="..\shader\camera_shader.vert">
+    <None Include="..\shader\color_shader.vert">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\shader\color_light_shader.frag">
       <Filter>资源文件</Filter>
     </None>
   </ItemGroup>
