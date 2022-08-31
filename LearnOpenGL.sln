@@ -27,6 +27,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CoordinateAndZbuffer", "Coo
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MoreCubeAndZbuffer", "MoreCubeAndZbuffer\MoreCubeAndZbuffer.vcxproj", "{670BB390-3FE5-4FB9-8F8C-2F5DED66B065}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NewStarter", "NewStarter\NewStarter.vcxproj", "{3FD3B017-82C9-4E97-8ECB-DAA5152D4629}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -131,6 +133,14 @@ Global
 		{670BB390-3FE5-4FB9-8F8C-2F5DED66B065}.Release|x64.Build.0 = Release|x64
 		{670BB390-3FE5-4FB9-8F8C-2F5DED66B065}.Release|x86.ActiveCfg = Release|Win32
 		{670BB390-3FE5-4FB9-8F8C-2F5DED66B065}.Release|x86.Build.0 = Release|Win32
+		{3FD3B017-82C9-4E97-8ECB-DAA5152D4629}.Debug|x64.ActiveCfg = Debug|x64
+		{3FD3B017-82C9-4E97-8ECB-DAA5152D4629}.Debug|x64.Build.0 = Debug|x64
+		{3FD3B017-82C9-4E97-8ECB-DAA5152D4629}.Debug|x86.ActiveCfg = Debug|Win32
+		{3FD3B017-82C9-4E97-8ECB-DAA5152D4629}.Debug|x86.Build.0 = Debug|Win32
+		{3FD3B017-82C9-4E97-8ECB-DAA5152D4629}.Release|x64.ActiveCfg = Release|x64
+		{3FD3B017-82C9-4E97-8ECB-DAA5152D4629}.Release|x64.Build.0 = Release|x64
+		{3FD3B017-82C9-4E97-8ECB-DAA5152D4629}.Release|x86.ActiveCfg = Release|Win32
+		{3FD3B017-82C9-4E97-8ECB-DAA5152D4629}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
