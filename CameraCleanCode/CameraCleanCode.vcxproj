@@ -21,10 +21,10 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{3fd3b017-82c9-4e97-8ecb-daa5152d4629}</ProjectGuid>
-    <RootNamespace>NewStarter</RootNamespace>
+    <ProjectGuid>{30812C49-2D92-41B8-B940-F0DADE6E2EA9}</ProjectGuid>
+    <RootNamespace>CameraCleanCode</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>NewStarter</ProjectName>
+    <ProjectName>CameraCleanCode</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -148,10 +148,16 @@
   <ItemGroup>
     <ClCompile Include="..\lib\stb_image.cpp" />
     <ClCompile Include="gl3w.c" />
-    <ClCompile Include="NewStarter.cpp" />
+    <ClCompile Include="CameraExample.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\stb_image.h" />
+    <ClInclude Include="..\MoreCubeAndZbuffer\build_world.h" />
+    <ClInclude Include="Camera.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\shader\camera_shader.frag" />
+    <None Include="..\shader\camera_shader.vert" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
