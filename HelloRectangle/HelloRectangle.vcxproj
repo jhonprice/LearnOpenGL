@@ -22,7 +22,7 @@
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
     <ProjectGuid>{7369DEC6-EF3A-4BFE-9929-BCDCBD9D4D80}</ProjectGuid>
-    <RootNamespace>HelloTriangle</RootNamespace>
+    <RootNamespace>HelloRectangle</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
     <ProjectName>HelloRectangle</ProjectName>
   </PropertyGroup>

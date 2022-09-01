@@ -22,7 +22,7 @@
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
     <ProjectGuid>{664BB04B-E048-480E-9B99-C8A8CB4A5149}</ProjectGuid>
-    <RootNamespace>LightExample</RootNamespace>
+    <RootNamespace>MaterialExample</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
     <ProjectName>MaterialExample</ProjectName>
   </PropertyGroup>

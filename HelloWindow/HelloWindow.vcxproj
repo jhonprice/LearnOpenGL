@@ -22,7 +22,7 @@
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
     <ProjectGuid>{4fc75e45-3c86-4af7-83e8-07745979b54d}</ProjectGuid>
-    <RootNamespace>Starter</RootNamespace>
+    <RootNamespace>HelloWindow</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
     <ProjectName>HelloWindow</ProjectName>
   </PropertyGroup>
