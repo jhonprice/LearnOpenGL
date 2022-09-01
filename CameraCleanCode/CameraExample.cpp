@@ -6,34 +6,20 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
-//build world
+
+//camera
+#include "Camera.h"
 #include "../MoreCubeAndZbuffer/build_world.h"
 
 //一些常量
-static int width = 800, height = 600;
+int width = 800, height = 600;
 const int NULL_ID = 0;
 const int vertexNum = 36;
 const int vertexAttriNum = 5;
 
 //相机的位置与方向
 #pragma region CameraPosInfo
-glm::vec3 cameraPos = glm::vec3(0.0f, 0.0f, 3.0f);
-glm::vec3 cameraFront = glm::vec3(0.0f, 0.0f, -1.0f);
-glm::vec3 cameraUp = glm::vec3(0.0f, 1.0f, 0.0f);
-
-//控制速度
-float deltaTime = 0.0f;	
-float lastFrame = 0.0f; 
-
-
-//相机欧拉角
-float lastX = width/2, lastY = height/2;
-float yaw=0 ,pitch=0;
-bool firstMouse = true;
-
-
-//fov
-float fov = 45.0f;
+CameraUtils cameraEnv(width,height);
 #pragma endregion CameraPosInfo
 
 
@@ -42,9 +28,11 @@ float fov = 45.0f;
 
 
 //<<渲染函数>>
-static void display(GLFWwindow* window, unsigned int shaderProgram_ID, int VAO_ID, unsigned int* TEXTURE_ID)
+void display(GLFWwindow* window, unsigned int shaderProgram_ID, int VAO_ID, unsigned int* TEXTURE_ID)
 {
-
+	std::cout << "\r";
+	std::cout << "Camera Front: " << cameraEnv.camera.Front.x << " " << cameraEnv.camera.Front.y << " " << cameraEnv.camera.Front.z;
+	std::cout<<"\t\t\t\tCamera Pos:" << cameraEnv.camera.Pos.x << " " << cameraEnv.camera.Pos.y << " " << cameraEnv.camera.Pos.z<<std::flush;
 	glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
@@ -86,27 +74,18 @@ static void display(GLFWwindow* window, unsigned int shaderProgram_ID, int VAO_I
 		int modelLoc = glGetUniformLocation(shaderProgram_ID, "model");
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 
-		glm::mat4 view = glm::mat4(1.0f);
-		if (0) {
-			const float radius = 10.0f;
-			float camX = sin(glfwGetTime()) * radius;
-			float camZ = cos(glfwGetTime()) * radius;
-			view = glm::lookAt(glm::vec3(camX, 0.0, camZ), glm::vec3(0.0, 0.0, 0.0), glm::vec3(0.0, 1.0, 0.0));
-		}
-		else {
-			view = glm::lookAt(cameraPos, cameraPos + cameraFront, cameraUp);
-		}
+
+		glm::mat4 view = cameraEnv.camera.GetViewMatrix();
 		int viewLoc = glGetUniformLocation(shaderProgram_ID, "view");
 		glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
 
 
 
 		//透射
-		auto fovRadians = glm::radians(fov);
-		auto aspect = 800.0f / 600.0f;
+		auto fovRadians = glm::radians(cameraEnv.camera.Zoom);
+		auto aspect = static_cast<float>(width / height);
 		auto nearPlane = 0.1f, farPlane = 100.0f;
-		glm::mat4 projection;
-		projection = glm::perspective(fovRadians, aspect, nearPlane, farPlane);
+		glm::mat4 projection = glm::perspective(fovRadians, aspect, nearPlane, farPlane);
 		int projLoc = glGetUniformLocation(shaderProgram_ID, "projection");
 		glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
 
@@ -119,14 +98,15 @@ static void display(GLFWwindow* window, unsigned int shaderProgram_ID, int VAO_I
 }
 
 //<<设置视口>>
-static void reshape(GLFWwindow* window, int w, int h)
+void reshape(GLFWwindow* window, int w, int h)
 {
 	width = w > 1 ? w : 1;
 	height = h > 1 ? h : 1;
 	glViewport(0, 0, width, height);
 }
 //<<处理输入>>
-static void processInput(GLFWwindow* window) {
+void processInput(GLFWwindow* window) {
+	cameraEnv.deltaUpdate(glfwGetTime());
 #pragma region Esc_CLose
 	if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
 		glfwSetWindowShouldClose(window, true);
@@ -142,15 +122,7 @@ static void processInput(GLFWwindow* window) {
 #pragma endregion F_LINE
 
 #pragma region WASD_MOVE
-	float cameraSpeed = 2.5f * deltaTime;
-	if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
-		cameraPos += cameraSpeed * cameraFront;
-	if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
-		cameraPos -= cameraSpeed * cameraFront;
-	if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
-		cameraPos -= glm::normalize(glm::cross(cameraFront, cameraUp)) * cameraSpeed;
-	if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
-		cameraPos += glm::normalize(glm::cross(cameraFront, cameraUp)) * cameraSpeed;
+	cameraEnv.wsad(window);
 #pragma endregion WASD_MOVE
 
 
@@ -158,51 +130,12 @@ static void processInput(GLFWwindow* window) {
 
 //<<鼠标位移映射欧拉角>>
 void mouse_callback(GLFWwindow* window, double xpos, double ypos) {
-
-	if (firstMouse)
-	{
-		lastX = xpos;
-		lastY = ypos;
-		firstMouse = false;
-	}
-	//确定位移
-	float xoffset = xpos - lastX;
-
-	//由于y的坐标是从底到顶的
-	float yoffset = lastY - ypos;
-	lastX = xpos;
-	lastY = ypos;
-
-	float sensitivity = 0.1f;
-	xoffset *= sensitivity;
-	yoffset *= sensitivity;
-
-	yaw += xoffset;
-	pitch += yoffset;
-
-	//控制范围
-	if (pitch > 89.0f)
-		pitch = 89.0f;
-	if (pitch < -89.0f)
-		pitch = -89.0f;
-
-	//欧拉角转坐标修改相机朝向
-	glm::vec3 direction;
-	direction.x = cos(glm::radians(yaw)) * cos(glm::radians(pitch));
-	direction.y = sin(glm::radians(pitch));
-	direction.z = sin(glm::radians(yaw)) * cos(glm::radians(pitch));
-	cameraFront = glm::normalize(direction);
-	std::cout<< "\r"<<cameraFront.x << " " << cameraFront.y << " " << cameraFront.z << std::flush;
-
+	cameraEnv.mouseMove(xpos, ypos);
 }
 //<<鼠标滚轮映射fov>>
 void scroll_callback(GLFWwindow* window, double xoffset, double yoffset)
 {
-	fov -= (float)yoffset;
-	if (fov < 1.0f)
-		fov = 1.0f;
-	if (fov > 45.0f)
-		fov = 45.0f;
+	cameraEnv.mouseRoll(yoffset);
 }
 
 int main(int argc, char** argv)
@@ -255,6 +188,8 @@ int main(int argc, char** argv)
 	glfwSetFramebufferSizeCallback(window, reshape);
 	glEnable(GL_DEPTH_TEST);
 #pragma endregion ViewPortAndDepthSet
+
+	
 
 	//<<鼠标设置>>
 #pragma region MouseInput
@@ -440,10 +375,6 @@ int main(int argc, char** argv)
 	//<<渲染循环>>
 #pragma region RenderPart
 	while (!glfwWindowShouldClose(window)) {
-		//std::cerr << "\rActive Time: " << glfwGetTime() << std::flush;
-		float currentFrame = glfwGetTime();
-		deltaTime = currentFrame - lastFrame;
-		lastFrame = currentFrame;
 		//<<处理输入>>
 		processInput(window);
 		//<<渲染函数>>
