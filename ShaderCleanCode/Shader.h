@@ -50,8 +50,22 @@ public:
 	unsigned int  getId() {
 		return program_ID;
 	}
+	void setInt(const std::string& name, int value) const;
+	void setFloat(const std::string& name, float value) const;
+	void setVec3(const std::string& name, float x, float y, float z) const;
 private:
 	unsigned int program_ID = 0;
 
 };
-
+void ShaderProgram::setInt(const std::string& name, int value) const
+{
+	glUniform1i(glGetUniformLocation(this->program_ID, name.c_str()), value);
+}
+void ShaderProgram::setFloat(const std::string& name, float value) const
+{
+	glUniform1f(glGetUniformLocation(this->program_ID, name.c_str()), value);
+}
+void ShaderProgram::setVec3(const std::string& name, float x, float y, float z) const
+{
+	glUniform3f(glGetUniformLocation(program_ID, name.c_str()), x, y, z);
+}

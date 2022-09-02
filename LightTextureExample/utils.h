@@ -40,3 +40,11 @@ unsigned int loadTexture(char const* path)
 
 	return textureID;
 }
+
+unsigned int TextureFromFile(const char* path, const string& directory)
+{
+    string filename = string(path);
+    filename = directory + '/' + filename;
+
+	return loadTexture(filename.c_str());
+}
