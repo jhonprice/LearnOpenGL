@@ -51,3 +51,4 @@ void setWorld(float* newA,int size) {
     }
 
 }
+
