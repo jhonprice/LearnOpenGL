@@ -1,11 +1,10 @@
 #include<iostream>
 #include "../ShaderCleanCode/Shader.h"
-#include <stb_image.h>
 //GLM м╥нд╪Ч
 #include<glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
-
+#include<stb_image.h>
 
 //camera
 #include "Camera.h"

@@ -1,6 +1,6 @@
 #include<iostream>
 #include "../ShaderCleanCode/Shader.h"
-
+#include "utils.h"
 //GLM Í·ÎÄ¼þ
 #include<glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
@@ -259,13 +259,13 @@ int main(int argc, char** argv)
 	//VertexShader
 	Shader vertexShader("../shader/light_texture_shader.vert", GL_VERTEX_SHADER);
 	Shader vertexLightShader("../shader/material_light_shader.vert", GL_VERTEX_SHADER);
-
+	unsigned int vertexShader_ID = vertexShader.getId();
+	unsigned int vertexLightShader_ID = vertexLightShader.getId();
 
 	//FragmentShader
 	Shader fragShader("../shader/light_texture_shader.frag", GL_FRAGMENT_SHADER);
 	Shader fragLightShader("../shader/material_light_shader.frag", GL_FRAGMENT_SHADER);
-	unsigned int vertexShader_ID = vertexShader.getId();
-	unsigned int vertexLightShader_ID = vertexLightShader.getId();
+	
 	unsigned int fragShader_ID = fragShader.getId();
 	unsigned int fragLightShader_ID = fragLightShader.getId();
 

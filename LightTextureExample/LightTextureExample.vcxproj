@@ -153,6 +153,7 @@
   <ItemGroup>
     <ClInclude Include="..\CameraCleanCode\Camera.h" />
     <ClInclude Include="..\include\stb_image.h" />
+    <ClInclude Include="utils.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\shader\light_texture_shader.frag" />

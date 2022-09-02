@@ -143,9 +143,10 @@ public:
 	float lastFrame = 0.0f;
 	//Ïà»úÅ·À­½Ç
 	float lastX,lastY;
+	int width, height;
 	bool firstMouse = true;
 
-	CameraUtils(int width,int height):lastX(width / 2), lastY(height / 2){}
+	CameraUtils(int width,int height):lastX(width / 2), lastY(height / 2), width(width), height(height){}
 
 	void wsad(GLFWwindow* window) {
 		float cameraSpeed = 2.5f * deltaTime;
@@ -186,6 +187,15 @@ public:
 	void deltaUpdate(float currentFrame) {
 		deltaTime = currentFrame - lastFrame;
 		lastFrame = currentFrame;
+	}
+
+	glm::mat4 getPerpective() {
+		auto fovRadians = glm::radians(camera.Zoom);
+		auto aspect = width*1.f / height;
+		auto nearPlane = 0.1f, farPlane = 100.0f;
+		glm::mat4 projection;
+		projection = glm::perspective(fovRadians, aspect, nearPlane, farPlane);
+		return projection;
 	}
 
 
