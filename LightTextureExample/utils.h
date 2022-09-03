@@ -3,6 +3,8 @@
 #include <GL/gl3w.h>
 #include <GLFW/glfw3.h>
 #include <stb_image.h>
+#include <string>
+using std::string;
 //<<¼ÓÔØÎÆÀíº¯Êý>>
 unsigned int loadTexture(char const* path)
 {
@@ -41,7 +43,7 @@ unsigned int loadTexture(char const* path)
 	return textureID;
 }
 
-unsigned int TextureFromFile(const char* path, const string& directory)
+unsigned int TextureFromFile(const char* path, const std::string& directory)
 {
     string filename = string(path);
     filename = directory + '/' + filename;
