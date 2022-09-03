@@ -3,6 +3,9 @@
 #include <GL/gl3w.h>
 #include <GLFW/glfw3.h>
 #include "../HelloTriangle/LoadShader.h"
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
 class Shader {
 public:
 	Shader(string filename, int type) :fileName(filename), shader_type(type) { loadShader(); 
