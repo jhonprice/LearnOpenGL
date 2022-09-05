@@ -36,6 +36,9 @@
     <ClCompile Include="resource_manager.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="sprite_render.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\stb_image.h">
@@ -53,5 +56,16 @@
     <ClInclude Include="resource_manager.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="sprite_render.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\shader\final_shader.frag">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\shader\final_shader.vert">
+      <Filter>资源文件</Filter>
+    </None>
   </ItemGroup>
 </Project>

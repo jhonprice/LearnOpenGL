@@ -152,6 +152,7 @@
     <ClCompile Include="FinalProject.cpp" />
     <ClCompile Include="resource_manager.cpp" />
     <ClCompile Include="shader.cpp" />
+    <ClCompile Include="sprite_render.cpp" />
     <ClCompile Include="texture.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -159,7 +160,12 @@
     <ClInclude Include="game.h" />
     <ClInclude Include="resource_manager.h" />
     <ClInclude Include="shader.h" />
+    <ClInclude Include="sprite_render.h" />
     <ClInclude Include="texture.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\shader\final_shader.frag" />
+    <None Include="..\shader\final_shader.vert" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
