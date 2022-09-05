@@ -1,10 +1,5 @@
 #include<iostream>
 #include "../ShaderCleanCode/Shader.h"
-#include <stb_image.h>
-//GLM 头文件
-#include<glm/glm.hpp>
-#include <glm/gtc/matrix_transform.hpp>
-#include <glm/gtc/type_ptr.hpp>
 #include "../CameraCleanCode/Camera.h"
 
 //一些常量

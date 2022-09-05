@@ -138,15 +138,15 @@ private:
 
 class CameraUtils {
 public:
-	Camera camera{glm::vec3(0.0f, 0.0f, 3.0f)};
+	Camera camera{ glm::vec3(0.0f, 0.0f, 3.0f) };
 	float deltaTime = 0.0f;
 	float lastFrame = 0.0f;
 	//Ïà»úÅ·À­½Ç
-	float lastX,lastY;
+	float lastX, lastY;
 	int width, height;
 	bool firstMouse = true;
 
-	CameraUtils(int width,int height):lastX(width / 2), lastY(height / 2), width(width), height(height){}
+	CameraUtils(int width, int height) :lastX(width / 2), lastY(height / 2), width(width), height(height) {}
 
 	void wsad(GLFWwindow* window) {
 		float cameraSpeed = 2.5f * deltaTime;
@@ -191,7 +191,7 @@ public:
 
 	glm::mat4 getPerpective() {
 		auto fovRadians = glm::radians(camera.Zoom);
-		auto aspect = width*1.f / height;
+		auto aspect = width * 1.f / height;
 		auto nearPlane = 0.1f, farPlane = 100.0f;
 		glm::mat4 projection;
 		projection = glm::perspective(fovRadians, aspect, nearPlane, farPlane);
