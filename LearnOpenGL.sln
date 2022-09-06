@@ -69,6 +69,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CubeMapExample2", "CubeMapE
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BlinnPhongExample", "BlinnPhongExample\BlinnPhongExample.vcxproj", "{101095C6-AD0A-4593-93C2-E5E90F34619B}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GammaExample", "GammaExample\GammaExample.vcxproj", "{99F390B7-ED37-4126-B1B1-50680C715E00}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -341,6 +343,14 @@ Global
 		{101095C6-AD0A-4593-93C2-E5E90F34619B}.Release|x64.Build.0 = Release|x64
 		{101095C6-AD0A-4593-93C2-E5E90F34619B}.Release|x86.ActiveCfg = Release|Win32
 		{101095C6-AD0A-4593-93C2-E5E90F34619B}.Release|x86.Build.0 = Release|Win32
+		{99F390B7-ED37-4126-B1B1-50680C715E00}.Debug|x64.ActiveCfg = Debug|x64
+		{99F390B7-ED37-4126-B1B1-50680C715E00}.Debug|x64.Build.0 = Debug|x64
+		{99F390B7-ED37-4126-B1B1-50680C715E00}.Debug|x86.ActiveCfg = Debug|Win32
+		{99F390B7-ED37-4126-B1B1-50680C715E00}.Debug|x86.Build.0 = Debug|Win32
+		{99F390B7-ED37-4126-B1B1-50680C715E00}.Release|x64.ActiveCfg = Release|x64
+		{99F390B7-ED37-4126-B1B1-50680C715E00}.Release|x64.Build.0 = Release|x64
+		{99F390B7-ED37-4126-B1B1-50680C715E00}.Release|x86.ActiveCfg = Release|Win32
+		{99F390B7-ED37-4126-B1B1-50680C715E00}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
