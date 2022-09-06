@@ -21,10 +21,10 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{B1E4EF89-137C-4CF3-A1C8-1B22D8E20B23}</ProjectGuid>
-    <RootNamespace>CubeMapExample</RootNamespace>
+    <ProjectGuid>{ad33ce86-b1f6-4681-85f9-d89e7cf8ad52}</ProjectGuid>
+    <RootNamespace>CubeMapExample1</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>CubeMapExample</ProjectName>
+    <ProjectName>CubeMapExample1</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -155,7 +155,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="..\shader\cubemap_box_frag_shader.frag" />
-    <None Include="..\shader\cubemap_box_vertex_shader.vert" />
+    <None Include="..\shader\cubemap_box_vertex_shader2.vert" />
     <None Include="..\shader\cubemap_frag_shader.frag" />
     <None Include="..\shader\cubemap_vertex_shader.vert" />
   </ItemGroup>

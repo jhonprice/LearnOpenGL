@@ -31,13 +31,13 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\shader\cubemap_frag_shader.frag">
-      <Filter>资源文件</Filter>
-    </None>
-    <None Include="..\shader\cubemap_vertex_shader.vert">
-      <Filter>资源文件</Filter>
-    </None>
     <None Include="..\shader\cubemap_box_frag_shader.frag">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\shader\cubemap_frag_shader2.frag">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\shader\cubemap_vertex_shader2.vert">
       <Filter>资源文件</Filter>
     </None>
     <None Include="..\shader\cubemap_box_vertex_shader.vert">
