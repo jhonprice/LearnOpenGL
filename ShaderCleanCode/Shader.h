@@ -57,6 +57,8 @@ public:
 	void setFloat(const std::string& name, float value) const;
 	void setVec3(const std::string& name, float x, float y, float z) const;
 	void setMat4(const std::string& name, const glm::mat4& mat) const;
+	void setVec2(const std::string& name, const glm::vec2& value) const;
+	void setVec2(const std::string& name, float x, float y) const;
 private:
 	unsigned int program_ID = 0;
 
@@ -76,4 +78,13 @@ void ShaderProgram::setVec3(const std::string& name, float x, float y, float z) 
 void ShaderProgram::setMat4(const std::string& name, const glm::mat4& mat) const
 {
 	glUniformMatrix4fv(glGetUniformLocation(program_ID, name.c_str()), 1, GL_FALSE, &mat[0][0]);
+}
+
+void ShaderProgram::setVec2(const std::string& name, const glm::vec2& value) const
+{
+	glUniform2fv(glGetUniformLocation(program_ID, name.c_str()), 1, &value[0]);
+}
+void ShaderProgram::setVec2(const std::string& name, float x, float y) const
+{
+	glUniform2f(glGetUniformLocation(program_ID, name.c_str()), x, y);
 }
