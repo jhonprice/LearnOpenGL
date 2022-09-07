@@ -45,6 +45,9 @@
     <ClCompile Include="game_level.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="ball_object_collisions.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\stb_image.h">
@@ -69,6 +72,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="game_level.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ball_object_collisions.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
