@@ -55,13 +55,13 @@ void Game::Init()
         -BALL_RADIUS * 2.0f);
 
     balls.push_back(new BallObject(ballPos, BALL_RADIUS, INITIAL_BALL_VELOCITY,
-        ResourceManager::GetTexture("face")));
+        ResourceManager::GetTexture("face"),true));
     ballNum++;
 }
 
 void Game::Update(float dt)
 {
-    for (auto b : balls) {
+    for (auto b: balls) {
         b->Move(dt, this->Width);
         this->DoCollisions(b);
         if (b->Position.y >= this->Height) // did ball reach bottom edge?
@@ -245,4 +245,5 @@ void Game::ResetPlayer()
     tmp->Reset(Player->Position + glm::vec2(PLAYER_SIZE.x / 2.0f - BALL_RADIUS, -(BALL_RADIUS * 2.0f)), INITIAL_BALL_VELOCITY);
     balls.clear();
     balls.push_back(tmp);
+    ballNum = 1;
 }
