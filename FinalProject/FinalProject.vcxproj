@@ -148,6 +148,8 @@
   <ItemGroup>
     <ClCompile Include="..\lib\stb_image.cpp" />
     <ClCompile Include="game.cpp" />
+    <ClCompile Include="game_level.cpp" />
+    <ClCompile Include="game_object.cpp" />
     <ClCompile Include="gl3w.c" />
     <ClCompile Include="FinalProject.cpp" />
     <ClCompile Include="resource_manager.cpp" />
@@ -158,12 +160,15 @@
   <ItemGroup>
     <ClInclude Include="..\include\stb_image.h" />
     <ClInclude Include="game.h" />
+    <ClInclude Include="game_level.h" />
+    <ClInclude Include="game_object.h" />
     <ClInclude Include="resource_manager.h" />
     <ClInclude Include="shader.h" />
     <ClInclude Include="sprite_render.h" />
     <ClInclude Include="texture.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\levels\one.lvl" />
     <None Include="..\shader\final_shader.frag" />
     <None Include="..\shader\final_shader.vert" />
   </ItemGroup>

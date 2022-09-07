@@ -8,7 +8,7 @@ using namespace std;
 // The Width of the screen
 const unsigned int SCREEN_WIDTH = 800;
 // The height of the screen
-const unsigned int SCREEN_HEIGHT = 600;
+const unsigned int SCREEN_HEIGHT = 1200;
 
 void framebuffer_size_callback(GLFWwindow*, int width, int height);
 void key_callback(GLFWwindow* window, int key, int, int action, int);
