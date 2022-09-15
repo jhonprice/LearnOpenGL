@@ -79,6 +79,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MSAATextureExample", "MSAAT
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AssimpExample", "AssimpExample\AssimpExample.vcxproj", "{486B91AD-2DA4-4E56-908A-29D7805B3FF2}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ImguiExample", "ImguiExample\ImguiExample.vcxproj", "{AA3A468D-449E-485B-8236-26B1E1A09234}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -391,6 +393,14 @@ Global
 		{486B91AD-2DA4-4E56-908A-29D7805B3FF2}.Release|x64.Build.0 = Release|x64
 		{486B91AD-2DA4-4E56-908A-29D7805B3FF2}.Release|x86.ActiveCfg = Release|Win32
 		{486B91AD-2DA4-4E56-908A-29D7805B3FF2}.Release|x86.Build.0 = Release|Win32
+		{AA3A468D-449E-485B-8236-26B1E1A09234}.Debug|x64.ActiveCfg = Debug|x64
+		{AA3A468D-449E-485B-8236-26B1E1A09234}.Debug|x64.Build.0 = Debug|x64
+		{AA3A468D-449E-485B-8236-26B1E1A09234}.Debug|x86.ActiveCfg = Debug|Win32
+		{AA3A468D-449E-485B-8236-26B1E1A09234}.Debug|x86.Build.0 = Debug|Win32
+		{AA3A468D-449E-485B-8236-26B1E1A09234}.Release|x64.ActiveCfg = Release|x64
+		{AA3A468D-449E-485B-8236-26B1E1A09234}.Release|x64.Build.0 = Release|x64
+		{AA3A468D-449E-485B-8236-26B1E1A09234}.Release|x86.ActiveCfg = Release|Win32
+		{AA3A468D-449E-485B-8236-26B1E1A09234}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
