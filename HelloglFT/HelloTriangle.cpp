@@ -83,7 +83,7 @@ void bindMesh(std::map<int, GLuint>& vbos,
 			else
 				std::cout << "vaa missing: " << attrib.first << std::endl;
 		}
-
+		std::cout << "model.textures.size(): " << model.textures.size() << std::endl;
 		if (model.textures.size() > 0) {
 			// fixme: Use material's baseColor
 			tinygltf::Texture& tex = model.textures[0];
