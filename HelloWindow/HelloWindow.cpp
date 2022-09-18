@@ -8,7 +8,6 @@ static int width = 600, height = 600;
 //<<渲染函数>>
 static void display(GLFWwindow *window)
 {
-	glfwSwapBuffers(window);
 	glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 	glClear(GL_COLOR_BUFFER_BIT);
 }
@@ -79,12 +78,14 @@ int main(int argc, char **argv)
 #pragma region RenderPart
 	while (!glfwWindowShouldClose(window)) {
 
+		//<<处理输入>>
+		processInput(window);
 		//<<渲染函数>>
 		display(window);
 		//<<事件触发器>>
 		glfwPollEvents();
-		//<<处理输入>>
-		processInput(window);
+		//<<交换缓冲区>>
+		glfwSwapBuffers(window);
 	}
 #pragma endregion
 

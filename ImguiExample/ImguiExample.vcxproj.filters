@@ -18,13 +18,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="NewStarter.cpp">
+    <ClCompile Include="HelloIMGUI.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="gl3w.c">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="..\lib\stb_image.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="..\include\IMGUI\imgui_widgets.cpp">
@@ -50,9 +47,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\include\stb_image.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="..\include\IMGUI\imgui_internal.h">
       <Filter>gui</Filter>
     </ClInclude>

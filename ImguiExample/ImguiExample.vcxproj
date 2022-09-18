@@ -22,9 +22,9 @@
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
     <ProjectGuid>{aa3a468d-449e-485b-8236-26b1e1a09234}</ProjectGuid>
-    <RootNamespace>ImguiExample</RootNamespace>
+    <RootNamespace>G_HelloWindow_IMGUI</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>ImguiExample</ProjectName>
+    <ProjectName>G_HelloWindow_IMGUI</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -153,9 +153,8 @@
     <ClCompile Include="..\include\IMGUI\imgui_impl_opengl3.cpp" />
     <ClCompile Include="..\include\IMGUI\imgui_tables.cpp" />
     <ClCompile Include="..\include\IMGUI\imgui_widgets.cpp" />
-    <ClCompile Include="..\lib\stb_image.cpp" />
     <ClCompile Include="gl3w.c" />
-    <ClCompile Include="NewStarter.cpp" />
+    <ClCompile Include="HelloIMGUI.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\IMGUI\imconfig.h" />
@@ -164,7 +163,6 @@
     <ClInclude Include="..\include\IMGUI\imgui_impl_opengl3.h" />
     <ClInclude Include="..\include\IMGUI\imgui_impl_opengl3_loader.h" />
     <ClInclude Include="..\include\IMGUI\imgui_internal.h" />
-    <ClInclude Include="..\include\stb_image.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
