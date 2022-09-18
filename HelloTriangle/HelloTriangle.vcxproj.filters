@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="gui">
+      <UniqueIdentifier>{77205532-cdba-4ed7-a296-b3e086744a57}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="HelloTriangle.cpp">
@@ -21,9 +24,54 @@
     <ClCompile Include="gl3w.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="..\include\IMGUI\imgui.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\IMGUI\imgui_demo.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\IMGUI\imgui_draw.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\IMGUI\imgui_impl_glfw.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\IMGUI\imgui_impl_opengl3.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\IMGUI\imgui_tables.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\IMGUI\imgui_widgets.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="GlfwGuiApp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LoadShader.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\IMGUI\imconfig.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\IMGUI\imgui.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\IMGUI\imgui_impl_glfw.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\IMGUI\imgui_impl_opengl3.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\IMGUI\imgui_impl_opengl3_loader.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\IMGUI\imgui_internal.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="GlfwGuiApp.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
