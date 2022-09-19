@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="gui">
+      <UniqueIdentifier>{c7353dbf-261f-4617-a7f1-cf83c603b6a4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="gl3w.c">
@@ -21,5 +24,64 @@
     <ClCompile Include="HelloRectangle.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="..\include\IMGUI\imgui.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\IMGUI\imgui_demo.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\IMGUI\imgui_draw.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\IMGUI\imgui_impl_glfw.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\IMGUI\imgui_impl_opengl3.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\IMGUI\imgui_tables.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\IMGUI\imgui_widgets.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\HelloTriangle\GlfwGuiApp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="RectangleApp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\IMGUI\imconfig.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\IMGUI\imgui.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\IMGUI\imgui_impl_glfw.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\IMGUI\imgui_impl_opengl3.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\IMGUI\imgui_impl_opengl3_loader.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\IMGUI\imgui_internal.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\HelloTriangle\GlfwGuiApp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\HelloTriangle\LoadShader.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\HelloTriangle\vertex_model.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="RectangleApp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

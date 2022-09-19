@@ -51,6 +51,9 @@
     <ClCompile Include="TriangleApp.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="ExampleApp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LoadShader.h">
@@ -81,6 +84,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="vertex_model.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ExampleApp.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

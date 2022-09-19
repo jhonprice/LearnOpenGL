@@ -147,6 +147,7 @@
     <ClCompile Include="..\include\IMGUI\imgui_impl_opengl3.cpp" />
     <ClCompile Include="..\include\IMGUI\imgui_tables.cpp" />
     <ClCompile Include="..\include\IMGUI\imgui_widgets.cpp" />
+    <ClCompile Include="ExampleApp.cpp" />
     <ClCompile Include="TriangleApp.cpp" />
     <ClCompile Include="gl3w.c" />
     <ClCompile Include="GlfwGuiApp.cpp" />
@@ -159,6 +160,7 @@
     <ClInclude Include="..\include\IMGUI\imgui_impl_opengl3.h" />
     <ClInclude Include="..\include\IMGUI\imgui_impl_opengl3_loader.h" />
     <ClInclude Include="..\include\IMGUI\imgui_internal.h" />
+    <ClInclude Include="ExampleApp.h" />
     <ClInclude Include="TriangleApp.h" />
     <ClInclude Include="GlfwGuiApp.h" />
     <ClInclude Include="LoadShader.h" />
