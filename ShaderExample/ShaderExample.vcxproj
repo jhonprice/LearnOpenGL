@@ -22,9 +22,9 @@
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
     <ProjectGuid>{68b6ac46-c8e0-4577-b541-a67fd5f7a418}</ProjectGuid>
-    <RootNamespace>ShaderExample</RootNamespace>
+    <RootNamespace>G_HelloShader</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>ShaderExample</ProjectName>
+    <ProjectName>G_HelloShader</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -140,6 +140,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\HelloTriangle\GlfwGuiApp.cpp" />
+    <ClCompile Include="..\include\IMGUI\imgui.cpp" />
+    <ClCompile Include="..\include\IMGUI\imgui_demo.cpp" />
+    <ClCompile Include="..\include\IMGUI\imgui_draw.cpp" />
+    <ClCompile Include="..\include\IMGUI\imgui_impl_glfw.cpp" />
+    <ClCompile Include="..\include\IMGUI\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="..\include\IMGUI\imgui_tables.cpp" />
+    <ClCompile Include="..\include\IMGUI\imgui_widgets.cpp" />
+    <ClCompile Include="BaseShaderApp.cpp" />
     <ClCompile Include="gl3w.c" />
     <ClCompile Include="ShaderExample.cpp" />
   </ItemGroup>
@@ -147,6 +156,18 @@
     <None Include="..\shader\example_shader.frag" />
     <None Include="..\shader\example_shader.vert" />
     <None Include="..\shader\example_shader_uniform.frag" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\HelloTriangle\GlfwGuiApp.h" />
+    <ClInclude Include="..\HelloTriangle\LoadShader.h" />
+    <ClInclude Include="..\HelloTriangle\vertex_model.h" />
+    <ClInclude Include="..\include\IMGUI\imconfig.h" />
+    <ClInclude Include="..\include\IMGUI\imgui.h" />
+    <ClInclude Include="..\include\IMGUI\imgui_impl_glfw.h" />
+    <ClInclude Include="..\include\IMGUI\imgui_impl_opengl3.h" />
+    <ClInclude Include="..\include\IMGUI\imgui_impl_opengl3_loader.h" />
+    <ClInclude Include="..\include\IMGUI\imgui_internal.h" />
+    <ClInclude Include="BaseShaderApp.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

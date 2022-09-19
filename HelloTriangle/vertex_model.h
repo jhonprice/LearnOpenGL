@@ -3,6 +3,8 @@
 #include <GLFW/glfw3.h>
 #define BUFFER_OFFSET(a) ((void*)(a))
 
+
+
 void triangle_plane_without_index(unsigned int& VAO_ID,unsigned int& VBO_ID, unsigned int& len) {
 
 	glGenVertexArrays(1, &VAO_ID);

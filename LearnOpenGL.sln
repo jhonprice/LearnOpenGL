@@ -3,17 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HelloTriangle", "HelloTriangle\HelloTriangle.vcxproj", "{CA14B574-E1F3-40B8-88AA-10BECF21C162}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "G_HelloTriangle", "HelloTriangle\HelloTriangle.vcxproj", "{CA14B574-E1F3-40B8-88AA-10BECF21C162}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HelloWindow", "HelloWindow\HelloWindow.vcxproj", "{4FC75E45-3C86-4AF7-83E8-07745979B54D}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "G_HelloWindow", "HelloWindow\HelloWindow.vcxproj", "{4FC75E45-3C86-4AF7-83E8-07745979B54D}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Starter", "Starter\Starter.vcxproj", "{7114614C-7BD1-48C6-9BC0-F2DB3B70606F}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HelloRectangle", "HelloRectangle\HelloRectangle.vcxproj", "{7369DEC6-EF3A-4BFE-9929-BCDCBD9D4D80}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "G_HelloRectangle", "HelloRectangle\HelloRectangle.vcxproj", "{7369DEC6-EF3A-4BFE-9929-BCDCBD9D4D80}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HelloRectangleEBO", "HelloRectangleEBO\HelloRectangleEBO.vcxproj", "{18639545-2B74-47FE-8AC7-79E5DA5EC75D}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ShaderExample", "ShaderExample\ShaderExample.vcxproj", "{68B6AC46-C8E0-4577-B541-A67FD5F7A418}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "G_HelloShader", "ShaderExample\ShaderExample.vcxproj", "{68B6AC46-C8E0-4577-B541-A67FD5F7A418}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MoreAttribute", "MoreAttribute\MoreAttribute.vcxproj", "{49AC954A-C47F-4217-8D51-343756C079EE}"
 EndProject
@@ -79,7 +77,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MSAATextureExample", "MSAAT
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AssimpExample", "AssimpExample\AssimpExample.vcxproj", "{486B91AD-2DA4-4E56-908A-29D7805B3FF2}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ImguiExample", "ImguiExample\ImguiExample.vcxproj", "{AA3A468D-449E-485B-8236-26B1E1A09234}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "G_HelloWindow_IMGUI", "ImguiExample\ImguiExample.vcxproj", "{AA3A468D-449E-485B-8236-26B1E1A09234}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HelloglFT", "HelloglFT\HelloglFT.vcxproj", "{BA4426EB-4D42-4D32-BA3F-B9DCDD40494E}"
 EndProject
@@ -123,14 +121,6 @@ Global
 		{7369DEC6-EF3A-4BFE-9929-BCDCBD9D4D80}.Release|x64.Build.0 = Release|x64
 		{7369DEC6-EF3A-4BFE-9929-BCDCBD9D4D80}.Release|x86.ActiveCfg = Release|Win32
 		{7369DEC6-EF3A-4BFE-9929-BCDCBD9D4D80}.Release|x86.Build.0 = Release|Win32
-		{18639545-2B74-47FE-8AC7-79E5DA5EC75D}.Debug|x64.ActiveCfg = Debug|x64
-		{18639545-2B74-47FE-8AC7-79E5DA5EC75D}.Debug|x64.Build.0 = Debug|x64
-		{18639545-2B74-47FE-8AC7-79E5DA5EC75D}.Debug|x86.ActiveCfg = Debug|Win32
-		{18639545-2B74-47FE-8AC7-79E5DA5EC75D}.Debug|x86.Build.0 = Debug|Win32
-		{18639545-2B74-47FE-8AC7-79E5DA5EC75D}.Release|x64.ActiveCfg = Release|x64
-		{18639545-2B74-47FE-8AC7-79E5DA5EC75D}.Release|x64.Build.0 = Release|x64
-		{18639545-2B74-47FE-8AC7-79E5DA5EC75D}.Release|x86.ActiveCfg = Release|Win32
-		{18639545-2B74-47FE-8AC7-79E5DA5EC75D}.Release|x86.Build.0 = Release|Win32
 		{68B6AC46-C8E0-4577-B541-A67FD5F7A418}.Debug|x64.ActiveCfg = Debug|x64
 		{68B6AC46-C8E0-4577-B541-A67FD5F7A418}.Debug|x64.Build.0 = Debug|x64
 		{68B6AC46-C8E0-4577-B541-A67FD5F7A418}.Debug|x86.ActiveCfg = Debug|Win32
