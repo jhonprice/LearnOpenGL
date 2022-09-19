@@ -74,3 +74,8 @@ void linkProgram(unsigned int vertexId, unsigned int fragId, unsigned int& progr
 
 	programInfo(programId);
 }
+
+void setUniformFloat(unsigned int programId,string name,float value) {
+	auto locationId = glGetUniformLocation(programId, name.c_str());
+	glUniform1f(locationId, value);
+}

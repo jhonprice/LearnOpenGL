@@ -6,6 +6,7 @@ private:
 	//imgui part
 	ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
 	bool line_mode = false;
+	float scaleNum = 1;
 public:
 	virtual void guiPass() override;
 	virtual void processInput(GLFWwindow*) override;
@@ -15,6 +16,9 @@ public:
 	const bool isLineMode() {
 		return line_mode;
 	};
+	const float getScale() {
+		return scaleNum;
+	}
 };
 
 class BaseShaderApp :public GlfwGuiApp {

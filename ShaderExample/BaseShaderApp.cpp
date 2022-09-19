@@ -27,6 +27,7 @@ void BaseShaderGui::guiPass() {
 		ImGui::ColorEdit3("clear color", (float*)&clear_color);
 		ImGui::Checkbox("line mode", (bool*)&line_mode);
 
+		ImGui::SliderFloat("Scale", &scaleNum, -1, 1);
 
 
 
@@ -49,8 +50,8 @@ int BaseShaderApp::setup() {
 	glfwSetFramebufferSizeCallback(sc.window, reshape);
 
 	//º”‘ÿshader
-	string vertexCode = "../shader/hellovertex.vert";
-	string fragCode = "../shader/hellofrag.frag";
+	string vertexCode = "../shader/v2/uniformvert.vert";
+	string fragCode = "../shader/v2/uniformfrag.frag";
 
 	loadShader(vertexCode, vertexId, GL_VERTEX_SHADER);
 	loadShader(fragCode, fragId, GL_FRAGMENT_SHADER);
@@ -76,6 +77,9 @@ void BaseShaderApp::linemode() {
 void BaseShaderApp::renderPass() {
 	glUseProgram(programId);
 	glBindVertexArray(vao);
-	
+
+	auto scaleNum = std::dynamic_pointer_cast<BaseShaderGui> (gui)->getScale();
+	setUniformFloat(programId,"aScale",scaleNum);
+
 	glDrawArrays(GL_TRIANGLES, 0, drawLen);
 }
