@@ -119,7 +119,7 @@ void reshape(GLFWwindow* window, int w, int h)
 	glViewport(0, 0, (w > 1 ? w : 1), (h > 1 ? h : 1));
 }
 //<<´¦ÀíÊäÈë>>
-void ExampleGui::processInput(GLFWwindow * window){
+void Gui::processInput(GLFWwindow * window){
 	if (ImGui::IsKeyPressed(ImGuiKey_Escape))
 		glfwSetWindowShouldClose(window, true);
 }

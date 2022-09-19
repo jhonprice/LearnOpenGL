@@ -27,7 +27,7 @@ class Gui {
 public:
 	void init(GLFWwindow*);
 	virtual void guiPass() = 0;
-	virtual void processInput(GLFWwindow*) = 0;
+	virtual void processInput(GLFWwindow*);
 };
 class ExampleGui : public Gui{
 private:
@@ -37,7 +37,6 @@ private:
 	ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
 public:
 	virtual void guiPass() override;
-	virtual void processInput(GLFWwindow*) override;
 	const ImVec4& getColor(){
 		return clear_color;
 	}

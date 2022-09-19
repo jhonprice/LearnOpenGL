@@ -48,6 +48,9 @@
     <ClCompile Include="GlfwGuiApp.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="TriangleApp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LoadShader.h">
@@ -72,6 +75,12 @@
       <Filter>gui</Filter>
     </ClInclude>
     <ClInclude Include="GlfwGuiApp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="TriangleApp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vertex_model.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

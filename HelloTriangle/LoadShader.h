@@ -5,9 +5,11 @@
 #include<string>
 using std::string;
 
-#define BUFFER_OFFSET(a) ((void*)(a))
 
-string readFile(string fileName) {
+
+
+
+string readShader(string fileName) {
 	
 	std::ifstream in(fileName.c_str());
 
@@ -18,12 +20,6 @@ string readFile(string fileName) {
 	in.close();
 	return content;
 	
-}
-
-string readShader(string fileName) {
-
-	return  readFile(fileName);
-
 }
 
 //<<shaderµ÷ÊÔÐÅÏ¢>>
@@ -56,4 +52,25 @@ int programInfo(unsigned int programId) {
 		delete[] log;
 	}
 	return linked;
+}
+
+void loadShader(string path, unsigned int& shaderId, unsigned int shaderType) {
+	string vertexShaderSourceCodeString = readShader(path);
+	const char* vertexShaderSourceCode = vertexShaderSourceCodeString.c_str();
+	shaderId = glCreateShader(shaderType);
+
+	glShaderSource(shaderId, 1, &vertexShaderSourceCode, nullptr);
+	glCompileShader(shaderId);
+
+
+	debugInfo(shaderId);
+}
+
+void linkProgram(unsigned int vertexId, unsigned int fragId, unsigned int& programId) {
+	programId = glCreateProgram();
+	glAttachShader(programId, vertexId);
+	glAttachShader(programId, fragId);
+	glLinkProgram(programId);
+
+	programInfo(programId);
 }
