@@ -15,7 +15,7 @@ void reshape(GLFWwindow* window, int w, int h);
 class OpenglContext {
 public:
 	GLFWwindow* window=nullptr;
-	int width = 1280, height = 1024;
+	int width = 1280, height = 1280;
 public:
 	int initGLFW(int major=3,int minor=3);
 	int initWindow();

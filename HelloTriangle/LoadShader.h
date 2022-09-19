@@ -3,6 +3,9 @@
 
 #include<fstream>
 #include<string>
+#include<glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
 using std::string;
 
 
@@ -78,4 +81,10 @@ void linkProgram(unsigned int vertexId, unsigned int fragId, unsigned int& progr
 void setUniformFloat(unsigned int programId,string name,float value) {
 	auto locationId = glGetUniformLocation(programId, name.c_str());
 	glUniform1f(locationId, value);
+}
+
+void setUniformMat4(unsigned int programId, string name, const glm::mat4& mat) {
+	//列优先模式
+	auto locationId = glGetUniformLocation(programId, name.c_str());
+	glUniformMatrix4fv(locationId, 1, GL_FALSE, &mat[0][0]);
 }

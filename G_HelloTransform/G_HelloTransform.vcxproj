@@ -140,16 +140,33 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\lib\stb_image.cpp" />
+    <ClCompile Include="..\HelloTriangle\GlfwGuiApp.cpp" />
+    <ClCompile Include="..\include\IMGUI\imgui.cpp" />
+    <ClCompile Include="..\include\IMGUI\imgui_demo.cpp" />
+    <ClCompile Include="..\include\IMGUI\imgui_draw.cpp" />
+    <ClCompile Include="..\include\IMGUI\imgui_impl_glfw.cpp" />
+    <ClCompile Include="..\include\IMGUI\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="..\include\IMGUI\imgui_tables.cpp" />
+    <ClCompile Include="..\include\IMGUI\imgui_widgets.cpp" />
     <ClCompile Include="gl3w.c" />
     <ClCompile Include="GLMExample.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\include\stb_image.h" />
+    <ClCompile Include="TransformApp.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\shader\glm_shader.frag" />
     <None Include="..\shader\glm_shader.vert" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\HelloTriangle\GlfwGuiApp.h" />
+    <ClInclude Include="..\HelloTriangle\LoadShader.h" />
+    <ClInclude Include="..\HelloTriangle\vertex_model.h" />
+    <ClInclude Include="..\include\IMGUI\imconfig.h" />
+    <ClInclude Include="..\include\IMGUI\imgui.h" />
+    <ClInclude Include="..\include\IMGUI\imgui_impl_glfw.h" />
+    <ClInclude Include="..\include\IMGUI\imgui_impl_opengl3.h" />
+    <ClInclude Include="..\include\IMGUI\imgui_impl_opengl3_loader.h" />
+    <ClInclude Include="..\include\IMGUI\imgui_internal.h" />
+    <ClInclude Include="TransformApp.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

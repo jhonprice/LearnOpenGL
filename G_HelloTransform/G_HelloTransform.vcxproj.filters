@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="gui">
+      <UniqueIdentifier>{aa25e364-315e-4230-b077-3203cc6ff270}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="framwork">
+      <UniqueIdentifier>{e15d7d07-62aa-4322-8f3b-8b3b98a2d462}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GLMExample.cpp">
@@ -21,14 +27,33 @@
     <ClCompile Include="gl3w.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\lib\stb_image.cpp">
+    <ClCompile Include="..\include\IMGUI\imgui.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\IMGUI\imgui_demo.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\IMGUI\imgui_draw.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\IMGUI\imgui_impl_glfw.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\IMGUI\imgui_impl_opengl3.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\IMGUI\imgui_tables.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\IMGUI\imgui_widgets.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\HelloTriangle\GlfwGuiApp.cpp">
+      <Filter>framwork</Filter>
+    </ClCompile>
+    <ClCompile Include="TransformApp.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\include\stb_image.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\shader\glm_shader.frag">
@@ -37,5 +62,37 @@
     <None Include="..\shader\glm_shader.vert">
       <Filter>资源文件</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\IMGUI\imconfig.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\IMGUI\imgui.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\IMGUI\imgui_impl_glfw.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\IMGUI\imgui_impl_opengl3.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\IMGUI\imgui_impl_opengl3_loader.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\IMGUI\imgui_internal.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\HelloTriangle\GlfwGuiApp.h">
+      <Filter>framwork</Filter>
+    </ClInclude>
+    <ClInclude Include="..\HelloTriangle\LoadShader.h">
+      <Filter>framwork</Filter>
+    </ClInclude>
+    <ClInclude Include="..\HelloTriangle\vertex_model.h">
+      <Filter>framwork</Filter>
+    </ClInclude>
+    <ClInclude Include="TransformApp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
